@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PronoExpert Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for better aesthetics if needed, but sticking to Tailwind */
+    body {
+      font-family: 'Inter', sans-serif; /* A common, clean font */
+      background-color: #f0f2f5; /* Light grey background - same as App.tsx */
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai"
+  }
+}
+</script>
+<script>
+  // Ensure process and process.env exist, primarily for environments
+  // where it might not be predefined (like some simple browser setups without build tools).
+  // However, API_KEY itself MUST be set by the environment as per guidelines.
+  if (typeof process === 'undefined') {
+    window.process = { env: {} };
+  } else if (typeof process.env === 'undefined') {
+    window.process.env = {};
+  }
+  // DO NOT attempt to set process.env.API_KEY here using prompt() or hardcoding.
+  // It MUST be provided by the execution environment.
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

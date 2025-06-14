@@ -1,0 +1,6 @@
+{
+  "name": "PronoExpert Clone",
+  "description": "A web application to display sports match information, similar to PronoExpert. Users can view matches for today, tomorrow, or past results, and filter by competition.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
